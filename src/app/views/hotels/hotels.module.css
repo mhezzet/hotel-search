@@ -1,0 +1,47 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas:
+    '. header'
+    'side main';
+
+  padding: 1rem;
+}
+
+.side {
+  grid-area: side;
+  padding: 0 1.5rem;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+.priceFilterLabel {
+  margin-top: 2rem;
+}
+
+.noHotels {
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
